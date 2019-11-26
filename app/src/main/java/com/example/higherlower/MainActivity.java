@@ -28,12 +28,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void isPlaying() {
         mCorrectView.setVisibility(View.INVISIBLE);
-        mButtonPress.setText("Guess");
+        mButtonPress.setText(R.string.guess_button);
     }
 
     public void hasWon() {
         mCorrectView.setVisibility(View.VISIBLE);
-        mButtonPress.setText("Play Again!");
+        mButtonPress.setText(R.string.play_again);
     }
 
     public void makeToast() {
@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 hasWon();
                 message = "You got it!";
+                mGuessInput.getText().clear();
                 generateRandomNumber();
             }
         } else {
